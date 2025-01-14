@@ -3,19 +3,45 @@
 <head>
     <title>HTML</title>
     <meta charset="utf-8">
+    <style>
+        a:link {
+            text-decoration: none;
+            color:black;
+        }
+        a:visited {
+            color:blue;
+        }
+        a:hover {
+            color:orange;
+        }
+        #now {
+            color:red;     
+        }
+        h1 {
+            text-align: center;
+            font-size: 60px;
+        }
+        hr {
+            border: 2px solid;
+        }
+        /* border property 선언할 때는 width style color으로. 순서는 상관 x 여기서 style은 필수요소임.*/
+    </style>
 </head>
 
+<!--포괄적인 태그선택자들부터 디자인하고, 클래스, id 순으로 예외를 두면서 디자인해가는 거임 그래서 우선순위도 id>클래스>태그 선택자 순인거고
+-->
 <body>
-    <h1><a href="index.html" title="About WEB">WEB</a></h1>
+    <h1><a href="index.html" title="About WEB" style="color:black">WEB</a></h1>
+    <hr>
     
     <ol>
-        <li><a href="HTML.html" title="About HTML">HTML</a></li>
+        <li><a href="HTML.html" title="About HTML" id="now">HTML</a></li>
         <li><a href="CSS.html" title="About CSS">CSS</a></li>
         <li><a href="JSC.html" title="About JavaScript">JavaScript</a></li>
     </ol>
 
 
-    <h1><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html5 spec">HTML</a></h1>
+    <h2><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html5 spec">HTML</a></h2>
 
     <p>Hypertext Markup Language is the standard markup language for <strong>cerating web pages</strong> and <u>web</u> applications.</p>
 
@@ -23,5 +49,26 @@
     <p style="margin-top:40px">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.</p>
     <img src="C:\Users\DESKTOP_0701\Desktop\download.webp" width="100">
 
+    <iframe width="550" height="315" src="https://www.youtube.com/embed/nScCotoHW8k?si=J4YbF2z84i_If65_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div id="disqus_thread"></div>
+        <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ktg-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
